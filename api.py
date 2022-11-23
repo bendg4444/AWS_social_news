@@ -14,8 +14,7 @@ conn = get_db_connection()
 ERROR_400 = 400
 ACCEPTED_200 = 200
 
-if __name__=='__main__':
-      app.run(debug=True,host='0.0.0.0', port=5000)
+
 
 def execute_query(query, params = (), code={}):
     if conn != None:
@@ -90,3 +89,5 @@ def get_by_tag():
                                 JOIN tags ON metadata.tag_id =  tags.id WHERE tags.description = %s;""", [tag]))
   return jsonify(response_data)
 
+if __name__=='__main__':
+      app.run(debug=False,host='0.0.0.0', port=5000)
