@@ -3,7 +3,7 @@ window.onload = async function load() {
 };
 
 async function getStories() {
-  const res = await fetch("http://3.8.202.191:5000/stories", {
+  const res = await fetch("http://3.8.10.40:5000/stories", {
     method: "GET",
     credentials: "include",
   });
@@ -16,7 +16,7 @@ async function handleVote(e) {
   const elemID = e.target.id.split("-");
   const id = elemID[0];
   const direction = elemID[1];
-  const rawRes = await fetch(`http://3.8.202.191:5000/stories/${id}/votes`, {
+  const rawRes = await fetch(`http://3.8.10.40:5000/stories/${id}/votes`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ direction }),
