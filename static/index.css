@@ -1,0 +1,57 @@
+.downvote {
+  margin-left: 0.5rem;
+}
+
+.title {
+  margin-left: 1rem;
+}
+
+body {
+  background: #ffbe76;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+main {
+  background: #fff;
+  padding: 1rem 3rem 2rem;
+  width: 900px;
+  margin: 2rem auto;
+  box-shadow: rgba(0, 0, 0, 0.05) -2px -2px 4px;
+}
+
+#form-container {
+  margin-top: 50x;
+  padding-bottom: 20px;
+}
+
+header {
+  background: #fff;
+  padding: 1rem 3rem 1rem;
+  width: 900px;
+  margin: 2rem auto;
+  box-shadow: rgba(0, 0, 0, 0.05) -2px -2px 4px;
+}
+
+#add-story {
+  margin-top: 50x;
+  margin-bottom: 20px;
+  color: blue;
+}
+
+/* .loader {
+	border: 8px solid #f3f3f3;
+	border-top: 8px solid #ffbe76;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	animation: spin 2s linear infinite;
+} */
+/* 
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+} */

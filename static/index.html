@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Social News Site</title>
+    <link rel="stylesheet" href="../static/index.css" />
+    <script src="../static/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Very Good™️ Social News Site</h1>
+    </header>
+    <main>
+      <div id="form-container">
+        <h2>Add Story</h2>
+        <div id="'add-story">  
+          <form id="add_title">
+            <div class="field">
+              <label for="news-title">Title:</label>
+              <input
+                type="text"
+                id="title_id"
+                name="title"
+                placeholder="Enter the article's title"
+              />
+              <hr></hr>
+            </div>
+            <div class="field">
+              <label for="url">URL:</label>
+              <input
+                type="text"
+                id="url_id"
+                name="url"
+                placeholder="Enter URL for article"
+              />
+              <small></small>
+            </div>
+            <hr></hr>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <h2>Top Stories</h2>
+      <div id="stories"></div>
+    </main>
+  </body>
+</html>
