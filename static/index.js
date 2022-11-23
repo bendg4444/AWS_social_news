@@ -8,7 +8,6 @@ async function getStories() {
     credentials: "include",
   });
   const data = await res.json();
-
   displayStories(data.stories);
 }
 
