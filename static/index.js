@@ -3,7 +3,7 @@ window.onload = async function load() {
 };
 
 async function getStories() {
-  const res = await fetch("http://3.8.10.40:5000/stories", {
+  const res = await fetch("/stories", {
     method: "GET",
     credentials: "include",
   });
@@ -15,7 +15,7 @@ async function handleVote(e) {
   const elemID = e.target.id.split("-");
   const id = elemID[0];
   const direction = elemID[1];
-  const rawRes = await fetch(`http://3.8.10.40:5000/stories/${id}/votes`, {
+  const rawRes = await fetch(`/stories/${id}/votes`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ direction }),
@@ -36,12 +36,10 @@ function createStory(story) {
 	<p>
 		<a class="title" href=${story.url}>${story.title} </a>
 		<span>(${story.score} points)</span>
-
 	</p>`;
 
   const upvoteButton = createVoteButton("upvote", `${story.id}-up`, "⬆");
   const downvoteButton = createVoteButton("downvote", `${story.id}-down`, "⬇");
-
   storyWrapper.append(upvoteButton, downvoteButton);
   stories.append(storyWrapper);
 }
