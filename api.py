@@ -5,7 +5,7 @@ from flask_cors import CORS
 from datetime import datetime
 
 def get_db_connection():
-    conn = psycopg2.connect("user=postgres password=trainee_ben1! host=news-scraper-db-ben.c1i5dspnearp.eu-west-2.rds.amazonaws.com")
+    conn = psycopg2.connect("user=postgres password=password1! host=database-daniela.cca9ozjnaqxx.eu-west-2.rds.amazonaws.com")
     return conn
 
 #Set up
@@ -13,8 +13,6 @@ app = Flask(__name__)
 conn = get_db_connection()
 ERROR_400 = 400
 ACCEPTED_200 = 200
-
-
 
 def execute_query(query, params = (), code={}):
     if conn != None:
